@@ -33,13 +33,10 @@ class ItemDetail(generics.RetrieveUpdateDestroyAPIView):
         item = cache.get(cache_key)
 
         if not item:
-            print("Cache miss")
             item = self.get_object()
             serializer = self.get_serializer(item)
             cache.set(cache_key, serializer.data, timeout=CACHE_TTL)
             return Response(serializer.data)
-        print("Cache hit")
-        print(item)
         return Response(item)
 
 
