@@ -1,0 +1,25 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Django files
+*.log
+*.pot
+*.pyc
+*.pyo
+db.sqlite3
+media/
+staticfiles/
+
+# Virtual environment
+venv/
+env/
+.env
+.venv
+.idea/
+
+# IDE files
+.vscode/
+.pytest_cache/
+.coverage
+.mypy_cache/
